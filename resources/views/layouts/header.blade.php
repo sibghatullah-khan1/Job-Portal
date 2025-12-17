@@ -249,6 +249,7 @@
                 
                 <!-- Account Dropdown -->
                 <ul class="navbar-nav">
+                    @if (!Auth::check())
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
                             <i class="fa fa-user nav-icon"></i> Account
@@ -261,6 +262,43 @@
                             <li><a class="dropdown-item" href="{{route('register')}}">
                                 <i class="fa fa-user-plus"></i> Register
                             </a></li>
+                            @else
+                            <div class="dropdown">
+                                <a class="btn btn-outline-secondary dropdown-toggle"
+                                href="#"
+                                role="button"
+                                id="userDropdown"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                    <i class="fa fa-user-circle"></i> {{Auth::user()->name}}
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="/">
+                                            <i class="fa fa-user"></i> Dashboard
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" href="/">
+                                            <i class="fa fa-cog"></i> Settings
+                                        </a>
+                                    </li>
+
+                                    <li><hr class="dropdown-divider"></li>
+
+                                    <li>
+                                        <form method="POST" action="/">
+                                            @csrf
+                                            <button type="submit" class="dropdown-item text-danger">
+                                                <i class="fa fa-sign-out"></i> Logout
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            @endif
                         </ul>
                     </li>
                 </ul>

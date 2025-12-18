@@ -13,7 +13,7 @@ class jobsController extends Controller
     public function index()
     {
         //
-        return view('afterlogin.jobs.jobs');
+        return view('afterlogin.jobs.job');
     }
 
     /**

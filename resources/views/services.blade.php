@@ -351,7 +351,7 @@
                             <li>Salary range indicators</li>
                             <li>Remote work opportunities</li>
                         </ul>
-                        <a href="{{route('jobs')}}" class="btn service-btn">Find Jobs</a>
+                        <a href="{{route('client.jobs')}}" class="btn service-btn">Find Jobs</a>
                     </div>
                 </div>
                 

@@ -503,7 +503,7 @@
                         <a href="{{route('register')}}" class="btn search-btn">
                             <i class="fa fa-user-plus"></i> Get Started Free
                         </a>
-                        <a href="{{route('jobs')}}" class="btn view-all-btn">
+                        <a href="{{route('client.jobs')}}" class="btn view-all-btn">
                             <i class="fa fa-search"></i> Browse Jobs
                         </a>
                     </div>
@@ -670,7 +670,7 @@
             </div>
             
             <div class="text-center mt-5">
-                <a href="{{route('jobs')}}" class="btn view-all-btn">
+                <a href="{{route('client.jobs')}}" class="btn view-all-btn">
                     <i class="fa fa-eye"></i> View All Categories
                 </a>
             </div>
@@ -686,7 +686,7 @@
                     <p class="section-subtitle" style="text-align: left; margin-bottom: 0;">Hand-picked opportunities from top companies</p>
                 </div>
                 <div class="col-md-4 text-md-end">
-                    <a href="{{route('jobs')}}" class="btn view-all-btn">
+                    <a href="{{route('client.jobs')}}" class="btn view-all-btn">
                         <i class="fa fa-briefcase"></i> View All Jobs
                     </a>
                 </div>
